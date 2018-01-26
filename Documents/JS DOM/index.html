@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang = 'eng'>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JS DOM</title>
+      <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+  <script src="info.js"></script> 
+</head>
+<body> 
+
+    <!-- Form to capture name and ages-->
+	<form id="form" onsubmit="return false">
+	   Name:<br>
+	   <input type="text" name="name" id="name" required Onchange = '
+	     var name = this.value
+	     if(name.length === 1) { //does not equal a string
+	     alert( "please enter your name");
+	     this.value=""; //clears the text box
+	     }'><br>
+	   Age:<br>
+	   <input type="qty" name="age" id="age" required Onchange = '
+	     if(isNaN(this.value) || this.value <= 0) {
+	     alert( "please enter an age greater than 1");
+	     this.value=""; //clears the text box
+	     }'><br>
+	   <input name="submit" type="submit" value="Submit" id="submit" onclick="addToList();">
+	</form>
+
+    <!-- Buttons to sort the list of entered information-->
+	<button onClick="descendingAgeOrder()">Descending Age Order</button>
+
+	<button onClick="descendingNameOrder()">Descending Name Order</button>
+
+	<button onClick="ascendingAgeOrder()">Ascending Age Order</button>
+
+	<button onClick="ascendingNameOrder()">Ascending Name Order</button>
+    
+    <!-- where results from the list will be printed on the page-->
+	<div id="list">
+	</div>
+
+</body>
+</html>
