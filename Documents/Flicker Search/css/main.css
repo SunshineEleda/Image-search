@@ -1,0 +1,48 @@
+body {
+  text-align: center;
+  background-color: #FAEDEB;
+  font-family: "Varela Round";
+}
+
+h1 {
+  font-size: 100px;
+  color: #F781F3 ;
+}
+
+label {
+  font-size: 20px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+  width: 250px;
+  height: 250px;
+}
+
+#pic{
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+
+}
+
+@media only screen and (min-width : 800px) {
+  h1 {
+    font-size: 150px
+  }
+
+  #pic {
+    display: inline;
+  }
+
+  img {
+  width: 350px;
+  height: 350px;
+}
+
+}
+
